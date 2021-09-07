@@ -26,7 +26,8 @@ class AlertDispatcher:
                 }
             }
             response = requests.post(url=slack_url, headers=headers, json=data_json, verify=False)
+            self.logger.info(f"Notification has been sent to slack with status: {response.status_code}")
             return response.status_code == 200
         except Exception as ex:
-            logger.error(ex)
+            self.logger.error(ex)
             return False
