@@ -1,1 +1,1 @@
-from alert_dispatcher import AlertDispatcher
+from src.alert_dispatcher.alert_dispatcher import AlertDispatcher
